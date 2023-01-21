@@ -94,7 +94,7 @@ jobs:
       run: |
         platform=${{ matrix.os }}
         platform=${platform/macos-*/macos-latest}
-        echo "::set-output name=platform::$platform"
+        echo "platform=${platform}" >> $GITHUB_OUTPUT
 
     - name: Setup system ruby
       uses: ruby/setup-ruby@v1
